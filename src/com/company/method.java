@@ -2,14 +2,14 @@ package com.company;
 
 public class method {
 
-    public void mergeSort(int[] arr)
+    public static void mergeSort(int[] arr)
     {
         int n = arr.length;
         int[] temp = new int[n];
         mergeSortHelper(arr, 0, n-1, temp);
     }
 
-    public void mergeSortHelper(int[] arr, int left, int right, int[] temp)
+    public static void mergeSortHelper(int[] arr, int left, int right, int[] temp)
     {
         if (left<right)
         {
@@ -20,23 +20,23 @@ public class method {
         }
     }
 
-    private static void merge(int[] elements, int left, int mid, int right, int[] temp)
+    private static void merge(int[] arr, int left, int mid, int right, int[] temp)
     {
         int i = left;
         int j = mid + 1;
         int k = left;
         while (i <= mid && j <= right)
         {
-            if (elements[i] < elements[j])
+            if (arr[i] < arr[j])
             {
-                temp[k] = elements[i];
+                temp[k] = arr[i];
                 i++;
             }
             else
             {
-                temp[k] = elements[j];
+                temp[k] = arr[j];
                 j++;
             }
             k++;
         }
-}
+}}
